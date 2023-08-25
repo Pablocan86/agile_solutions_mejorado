@@ -1,0 +1,57 @@
+@import "../modulos/mixin";
+
+@media (min-width:680px) and (max-width:2000px) {
+    body {
+    
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (3 1fr);
+        grid-template-areas: 
+        "head head"
+        "main main"
+        "footer footer";
+    
+    header{ 
+        width: 100%;
+        nav .nav-xl{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap:40px;
+
+        .div-header-logo {
+            width: 20%;
+        }
+
+        ul {
+            display: flex;
+            gap: 20px;
+            width: 60%;
+
+            li:hover {
+                font-weight: 600;
+            }
+        }
+
+
+        .redes-header {
+            width: 20%;
+            display: flex;
+            
+            a img {
+                padding-left: 5px;
+                padding-right: 5px; 
+            }
+        }
+}
+
+            nav {
+                width: 80%;
+        
+                .nav-sm{
+                    display: none;
+                }
+            }
+        }    
+    }
+}

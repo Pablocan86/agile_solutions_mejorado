@@ -1,0 +1,28 @@
+@import "../modulos/mixin";
+
+footer {
+    grid-area: footer;
+    background-color: $paleta_violeta_oscuro;
+    @include flexbox (column, space-around, center);
+    color: $paleta_gris_claro;
+    a{
+        color:$paleta_gris_claro;
+    }
+    ul {
+        @include flexbox (row, space-evenly, center);
+        color:$paleta_gris_claro;
+
+        
+
+        .li-footer {
+            border-left: 1px solid $paleta_gris_claro;
+            
+        }
+    }
+    p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+}

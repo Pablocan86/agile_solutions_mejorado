@@ -1,0 +1,32 @@
+
+@mixin flexbox ($direction, $justify, $aling)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items:$aling;
+}
+
+@mixin botones {
+    text-align: center;            
+    margin-top: 20px;
+    padding-top: 10px;
+    width: 200px;
+    height:50px;
+    background-color: $paleta_violeta;
+    border-radius: 25px;
+    color: $paleta_gris_claro;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    
+    &:hover {
+        background-color: $paleta_morado;
+    }
+}
+
+@mixin secciones {
+        color:$paleta_gris_claro;
+        background-image: linear-gradient(to right, $paleta_violeta_oscuro, $paleta_morado, $paleta_gris_claro,);
+        padding: 50px 0 20px 20px;
+        
+}
