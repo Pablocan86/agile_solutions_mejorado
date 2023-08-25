@@ -7,6 +7,7 @@ main {
         background-image: url(../assets/images/banner-enero20.jpg);
         background-position: center;
         background-size: cover;
+        overflow: hidden;
         background-repeat: no-repeat;
 
         .div-section1 {
@@ -24,6 +25,9 @@ main {
                 color: $paleta_violeta;
             }
 
+            p {
+                width: 90%;
+            }
             a .a-div-section1 {
                 @include botones;
             }
@@ -163,14 +167,14 @@ main {
                 }
                 input {
                     margin-left: 5px;
-                    width: 90%;
+                    width: 95%;
                     font-size: 1.5rem;
                     padding: 20px;
                     border-radius: 10px;
                 }
 
                 textarea {
-                    width: 90%;
+                    width: 95%;
                     font-size: 1.5rem;
                     padding: 20px;
                     border-radius: 10px;
@@ -178,7 +182,7 @@ main {
                 }
 
                 .divbotones {
-                    width: 90%;
+                    width: 95%;
                     margin-top:10px;
                     @include flexbox (row, space-evenly,center);
                     .input-btn {

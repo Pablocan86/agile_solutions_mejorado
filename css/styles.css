@@ -6,10 +6,10 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 0.1fr 4fr 0.1fr;
   grid-template-areas: "head" "main" "footer";
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -29,7 +29,7 @@ body header {
   width: 100%;
   background-color: #F4F3F4;
   position: sticky;
-  top: 0.5px;
+  top: 0.1px;
 }
 body header .div-header-logo {
   width: 70%;
@@ -108,6 +108,7 @@ main .section1 {
   background-image: url(../assets/images/banner-enero20.jpg);
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   background-repeat: no-repeat;
 }
 main .section1 .div-section1 {
@@ -123,6 +124,9 @@ main .section1 .div-section1 .h2-div-section1 {
 main .section1 .div-section1 .h3-div-section1 {
   font-style: italic;
   color: #5E2B83;
+}
+main .section1 .div-section1 p {
+  width: 90%;
 }
 main .section1 .div-section1 a .a-div-section1 {
   text-align: center;
@@ -273,20 +277,20 @@ main .section4 .article1-section4 form label {
 }
 main .section4 .article1-section4 form input {
   margin-left: 5px;
-  width: 90%;
+  width: 95%;
   font-size: 1.5rem;
   padding: 20px;
   border-radius: 10px;
 }
 main .section4 .article1-section4 form textarea {
-  width: 90%;
+  width: 95%;
   font-size: 1.5rem;
   padding: 20px;
   border-radius: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 main .section4 .article1-section4 form .divbotones {
-  width: 90%;
+  width: 95%;
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -330,6 +334,7 @@ main .section4 .article1-section4 .div1-section4 div {
 
 footer {
   grid-area: footer;
+  width: 100%;
   background-color: #0E1139;
   display: flex;
   flex-direction: column;
@@ -347,22 +352,40 @@ footer ul {
   align-items: center;
   color: #F4F3F4;
 }
+footer ul li {
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
 footer ul .li-footer {
   border-left: 1px solid #F4F3F4;
 }
+footer ul .li-footer a {
+  text-decoration: underline;
+}
 footer p {
   margin-top: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 @media (min-width: 680px) and (max-width: 2000px) {
   body {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat 3 1fr;
-    grid-template-areas: "head head" "main main" "footer footer";
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat 3 1fr;
+    grid-template-rows: 0.1fr 3fr 0.1fr;
+    grid-template-areas: "head head head" "main main main" "footer footer footer";
   }
   body header {
     width: 100%;
+  }
+  body header .div-header-logo .imglogo {
+    width: 150px;
+    height: 100px;
+  }
+  body header nav {
+    width: 80%;
   }
   body header nav .nav-xl {
     display: flex;
@@ -371,30 +394,124 @@ footer p {
     flex-wrap: wrap;
     gap: 40px;
   }
-  body header nav .nav-xl .div-header-logo {
-    width: 20%;
+  body header nav div .nav-sm {
+    display: none;
   }
-  body header nav .nav-xl ul {
+  body header nav ul {
     display: flex;
     gap: 20px;
     width: 60%;
   }
-  body header nav .nav-xl ul li:hover {
+  body header nav ul li:hover {
     font-weight: 600;
   }
-  body header nav .nav-xl .redes-header {
+  body header nav .redes-header {
     width: 20%;
     display: flex;
   }
-  body header nav .nav-xl .redes-header a img {
+  body header nav .redes-header a img {
     padding-left: 5px;
     padding-right: 5px;
   }
-  body header nav {
-    width: 80%;
+  body main {
+    width: 100%;
   }
-  body header nav .nav-sm {
-    display: none;
+  body main .section1 {
+    height: 50vh;
+    padding-bottom: 50px;
+  }
+  body main .section1 .div-section1 {
+    padding-top: 100px;
+  }
+  body main .section2 .article2-section2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  body main .section2 .article2-section2 h4 {
+    width: 50%;
+    text-align: center;
+  }
+  body main .section2 .article2-section2 .div-article2-section2 {
+    width: 50%;
+    display: flex;
+    align-items: start;
+  }
+  body main .section2 .article2-section2 .div-article2-section2 a {
+    text-align: start;
+  }
+  body main .section2 .article3-section2 {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: "mision vision" "valores valores";
+  }
+  body main .section2 .article3-section2 .div1-article3-section2 {
+    grid-area: mision;
+  }
+  body main .section2 .article3-section2 .div1-article3-section2 p {
+    font-size: 1.2rem;
+  }
+  body main .section2 .article3-section2 .div2-article3-section2 {
+    grid-area: vision;
+  }
+  body main .section2 .article3-section2 .div2-article3-section2 p {
+    font-size: 1.2rem;
+  }
+  body main .section2 .article3-section2 .div3-article3-section2 {
+    grid-area: valores;
+  }
+  body main .section2 .article3-section2 .div3-article3-section2 p {
+    font-size: 1.2rem;
+  }
+  body main .section3 .article2-section3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body main .section3 .article2-section3 img {
+    margin-left: 20px;
+  }
+  body main .section3 .article2-section3 .div1-section3 {
+    margin: 0px 10px 10px 10px;
+  }
+  body main .section4 {
+    width: 100%;
+  }
+  body main .section4 .article1-section4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  body main .section4 .article1-section4 form {
+    width: 50%;
+  }
+  body main .section4 .article1-section4 form input, body main .section4 .article1-section4 form textarea, body main .section4 .article1-section4 form label {
+    font-size: 1rem;
+  }
+  body main .section4 .article1-section4 form .divbotones {
+    margin-bottom: 20px;
+  }
+  body main .section4 .article1-section4 .div1-section4 {
+    width: 50%;
+    margin-bottom: 70px;
+  }
+  body main .section4 .article1-section4 .div1-section4 img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  body main .section4 .article1-section4 .div1-section4 div {
+    margin-top: 30px;
+    font-size: 1rem;
+  }
+  body footer {
+    width: 100%;
   }
 }
 

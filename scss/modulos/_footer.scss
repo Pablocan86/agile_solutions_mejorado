@@ -2,6 +2,7 @@
 
 footer {
     grid-area: footer;
+    width: 100%;
     background-color: $paleta_violeta_oscuro;
     @include flexbox (column, space-around, center);
     color: $paleta_gris_claro;
@@ -12,16 +13,24 @@ footer {
         @include flexbox (row, space-evenly, center);
         color:$paleta_gris_claro;
 
-        
+        li {
+            margin-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 10px;
+            
+        }
 
         .li-footer {
             border-left: 1px solid $paleta_gris_claro;
-            
+            a{
+                text-decoration: underline;
+            }
         }
     }
     p {
         margin-top: 10px;
-        margin-bottom: 10px;
+        padding-bottom: 40px;
         
     }
 
