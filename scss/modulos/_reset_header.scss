@@ -31,7 +31,9 @@ body {
         @include flexbox (row, space-around, center);
         width: 100%;
         background-color: $paleta_gris_claro;
-        position: fixed;
+        position: sticky;
+        top:0.5px;
+        
 
         .div-header-logo {
             width: 70%;
@@ -89,6 +91,7 @@ body {
                 .icono_menu {
                     width: 50px;
                     height: 50px;
+                    
                 }
                 
                 .menu_desplegable {
